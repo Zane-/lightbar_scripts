@@ -1,9 +1,14 @@
 #!/bin/bash
  
+run=1
+trap "run=0" INT
+
 sudo ectool lightbar seq stop
 sudo ectool lightbar 4 00 00 00
- 
-while :
+
+echo "Press Ctrl + C to quit"
+
+while [ $run -eq 1 ]:
 do
     sudo ectool lightbar 0 FF 00 00
     sudo ectool lightbar 1 FF 00 00
@@ -16,3 +21,9 @@ do
     sudo ectool lightbar 3 FF 00 00
     sleep 0.4
 done
+
+sudo ectool lightbar seq stop
+sudo ectool lightbar seq run
+
+echo "\nBye!"
+exit 0
