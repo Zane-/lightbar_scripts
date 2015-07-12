@@ -5,3 +5,5 @@ A collection of scripts for controlling the Chromebook Pixel's lightbar.
 * Press ctrl + c to stop the script (while still in the shell)  
   To stop the script if it is running in the background, type `ps -fu chronos` then find the correct PID and type `kill PID` (where PID is a number)  
   Then type `sudo ectool lightbar seq stop && sudo ectool lightbar seq run` to restore the lightbar to default values.
+
+###### Note: I would not run these scripts for too long.
