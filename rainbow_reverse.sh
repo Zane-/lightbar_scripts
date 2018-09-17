@@ -7,7 +7,7 @@ sudo ectool lightbar 4 00 00 00
 
 echo "Press Ctrl + C to quit"
 
-while [ $run -eq 1 ]:
+while [ $run -eq 1 ];
 do
     sudo ectool lightbar 3 FF 00 00
     sudo ectool lightbar 2 EE 9A 00
